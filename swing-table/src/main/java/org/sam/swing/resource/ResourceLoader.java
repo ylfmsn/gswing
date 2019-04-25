@@ -182,6 +182,8 @@ public class ResourceLoader {
 	public static URL getResource(String name) {
 		if (!resources.containsKey(name)) {
 			synchronized (resources) {
+				//System.out.println(ResourceLoader.class.getClassLoader().getResource(""));
+				//System.out.println(ResourceLoader.class.getClassLoader().getResource(name));
 				resources.put(name, ResourceLoader.class.getClassLoader().getResource(name));
 			}
 		}

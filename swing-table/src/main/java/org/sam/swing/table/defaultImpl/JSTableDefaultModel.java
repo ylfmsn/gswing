@@ -161,6 +161,7 @@ public class JSTableDefaultModel<E> extends JSTableModel<Collection<E>> {
 	 */
 	@Override
 	public boolean hasChange() {
+
 		return this.deletes.size() > 0 | this.creates.size() > 0 | this.modifies.size() > 0;
 	}
 
